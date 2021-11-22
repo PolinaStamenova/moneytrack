@@ -4,12 +4,21 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f5f6f8;
+}
+
+.profiler-result {
+  display: none;
+}
+
 ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+  color: rgb(162, 162, 153);
 }
 
 .home-container {
@@ -43,5 +52,80 @@ a {
 }
 
 #signupBtn {
-  color: rgb(158, 155, 155);
+  color: rgb(162, 162, 153);
+}
+
+.fa-arrow-left {
+  color: #fff;
+}
+
+.sign-nav-top {
+  color: rgb(240, 232, 232);
+  background-color: #3470b4;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0.4rem;
+  margin-bottom: 1rem;
+  align-items: baseline;
+}
+
+.inputs {
+  padding: 0.5rem;
+  border-top: 1px solid #f0f0f2;
+  border-bottom: 1px solid #f0f0f2;
+}
+
+input {
+  border: none;
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+input::placeholder {
+  color: rgb(162, 162, 153);
+}
+
+.action {
+  background: transparent;
+  color: rgb(240, 232, 232);
+}
+
+.user-icon {
+  color: #fff;
+  background-color: rgba(187, 190, 198, 255);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.registration-picture {
+  align-items: baseline;
+}
+
+#no-padding,
+#no-padding_two {
+  margin: 0;
+}
+
+.border-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.144);
+}
+
+.field {
+  padding-bottom: 0.6rem;
+}
+
+#forget {
+  color: rgb(162, 162, 153);
+}
+
+.forgot-pass {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pic {
+  color: rgb(162, 162, 153);
 }
