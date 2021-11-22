@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     root "users#home"
   end
 
-  root "users#new", as: "moneytrack"
+  root "groups#index", as: "moneytrack"
+
+  resources :groups, only: [:new, :show, :create]
 end
