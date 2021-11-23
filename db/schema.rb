@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_093959) do
+ActiveRecord::Schema.define(version: 2021_11_23_095221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,19 +21,24 @@ ActiveRecord::Schema.define(version: 2021_11_22_093959) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "money_track_id", null: false
-    t.index ["money_track_id"], name: "index_groups_on_money_track_id"
     t.index ["user_id"], name: "index_groups_on_user_id"
+  end
+
+  create_table "money_groups", force: :cascade do |t|
+    t.bigint "group_id", null: false
+    t.bigint "money_track_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_money_groups_on_group_id"
+    t.index ["money_track_id"], name: "index_money_groups_on_money_track_id"
   end
 
   create_table "money_tracks", force: :cascade do |t|
     t.string "name"
     t.integer "amount"
     t.bigint "user_id", null: false
-    t.bigint "group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["group_id"], name: "index_money_tracks_on_group_id"
     t.index ["user_id"], name: "index_money_tracks_on_user_id"
   end
 
@@ -55,8 +60,8 @@ ActiveRecord::Schema.define(version: 2021_11_22_093959) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "groups", "money_tracks"
   add_foreign_key "groups", "users"
-  add_foreign_key "money_tracks", "groups"
+  add_foreign_key "money_groups", "groups"
+  add_foreign_key "money_groups", "money_tracks"
   add_foreign_key "money_tracks", "users"
 end

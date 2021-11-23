@@ -9,7 +9,7 @@
 
 <div class="login-page">
     <div>
-        <%= form_with(model: @group) do |f| %>
+        <%= form_with url: groups_path, model: @group do |f| %>
         <% @group.errors.full_messages_for(:name).each do |m| %>
         <%= m %>
         <% end %>

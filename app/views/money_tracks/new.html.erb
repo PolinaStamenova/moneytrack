@@ -1,0 +1,12 @@
+<h1>MoneyTracks#new</h1>
+<p>Find me in app/views/money_tracks/new.html.erb</p>
+
+ <%= form_with url: money_tracks_path, model: @money_track do |f| %>
+        <%= f.text_field :name, class: 'login-field',id: "groupname", placeholder: "Moneytrack Name", required: true %>
+        <%= f.text_field :amount, class: 'login-field mt-0', placeholder: "$", required: true %>
+        <div class="green-field">
+        <%= f.hidden_field :group_id, value: group_id %>
+        <div class="green-field">
+            <%= f.submit "Create", class: "green-button" %>
+        </div>
+        <% end %>

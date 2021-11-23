@@ -11,17 +11,17 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
   </div>
   <div class=" border-top">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password"%>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
   </div>
 </div>
 <div class = "forgot-pass">
   <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-    <%= link_to "Forgot your password?", new_password_path(resource_name), id: "forget"%><br />
+    <%= link_to "Forgot your password?", new_password_path(resource_name), id: "forget" %><br />
   <% end %>
 <% end %>
 
 <% flash.each do |type, msg| %>
   <div class="alert alert-danger mt-2">
-      <%= msg %>
+    <%= msg %>
   </div>
 <% end %>
