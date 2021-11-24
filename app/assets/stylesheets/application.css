@@ -33,6 +33,7 @@ a {
   padding: 0 1rem;
   gap: 0.5rem;
 }
+
 .login-field {
   padding: 0.5rem;
   border-radius: 2px;
@@ -207,7 +208,7 @@ input::placeholder {
 }
 
 .money-ul {
-  padding: 0rem 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
