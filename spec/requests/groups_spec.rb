@@ -24,7 +24,12 @@ RSpec.describe "Groups", type: :request do
   end
 
   describe "GET /show" do
-    before { get "/groups/show" }
+    let(:user) { User.create(name: "Polina", email: "polina@mail.com", password: "123456") }
+    let(:group) { Group.create(name: "Fast Food", icon: "http//", user: user) }
+
+    before do
+      get group_path(group.id)
+    end
     it "should have response status correct(ok)" do
       expect(response).to have_http_status(:ok)
     end
