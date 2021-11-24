@@ -1,11 +1,11 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class = "sign-nav-top">
+  <nav class = "nav-top">
       <a href="/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-    <p id= "no-padding">LOGIN</p>
-    <div class="actions">
-      <%= f.submit "Log in", class: "action" %>
-    </div>
-  </div>
+      <p id= "no-padding">LOGIN</p>
+      <div class="actions">
+        <%= f.submit "Log in", class: "action" %>
+      </div>
+  </nav>
 <div class = "inputs">
   <div class ="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
@@ -20,8 +20,3 @@
   <% end %>
 <% end %>
 
-<% flash.each do |type, msg| %>
-  <div class="alert alert-danger mt-2">
-    <%= msg %>
-  </div>
-<% end %>

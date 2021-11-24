@@ -1,18 +1,18 @@
 class MoneyTracksController < ApplicationController
   def new
-    @group_id = group_id
+    # @group_id = group_id
+    @group = Group.find(params[:group_id])
+
     @money_track = MoneyTrack.new
   end
 
   def create
     @group = Group.find(group_id)
     @money_track = @group.add_money_track(money_track_params)
-    # @money_track.save!
-
     redirect_to @group
 
   rescue ActiveRecord::RecordInvalid
-    render :new
+    render :new, group_id: group_id
   end
 
   private
