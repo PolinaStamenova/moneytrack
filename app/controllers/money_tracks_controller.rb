@@ -10,7 +10,6 @@ class MoneyTracksController < ApplicationController
     @group = Group.find(group_id)
     @money_track = @group.add_money_track(money_track_params)
     redirect_to @group
-
   rescue ActiveRecord::RecordInvalid
     render :new, group_id: group_id
   end

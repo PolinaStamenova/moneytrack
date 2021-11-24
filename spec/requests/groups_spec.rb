@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "Groups", type: :request do
-  describe "GET /new" do
+RSpec.describe 'Groups', type: :request do
+  describe 'GET /new' do
     before { get new_group_path }
-    it "should have response status correct(ok)" do
+    it 'should have response status correct(ok)' do
       expect(response).to have_http_status(:ok)
     end
 
@@ -12,9 +12,9 @@ RSpec.describe "Groups", type: :request do
     end
   end
 
-  describe "GET /index" do
+  describe 'GET /index' do
     before { get moneytrack_path }
-    it "should have response status correct(ok)" do
+    it 'should have response status correct(ok)' do
       expect(response).to have_http_status(:ok)
     end
 
@@ -23,14 +23,14 @@ RSpec.describe "Groups", type: :request do
     end
   end
 
-  describe "GET /show" do
-    let(:user) { User.create(name: "Polina", email: "polina@mail.com", password: "123456") }
-    let(:group) { Group.create(name: "Fast Food", icon: "http//", user: user) }
+  describe 'GET /show' do
+    let(:user) { User.create(name: 'Polina', email: 'polina@mail.com', password: '123456') }
+    let(:group) { Group.create(name: 'Fast Food', icon: 'http//', user: user) }
 
     before do
       get group_path(group.id)
     end
-    it "should have response status correct(ok)" do
+    it 'should have response status correct(ok)' do
       expect(response).to have_http_status(:ok)
     end
 
@@ -38,5 +38,4 @@ RSpec.describe "Groups", type: :request do
       expect(response).to render_template('show')
     end
   end
-
 end

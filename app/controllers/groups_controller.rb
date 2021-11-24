@@ -9,16 +9,14 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @group_money_tracks = @group.money_tracks.order(created_at: "DESC")
+    @group_money_tracks = @group.money_tracks.order(created_at: 'DESC')
   end
 
   def create
     @group = current_user.groups.create(group_params)
-    flash[:notice] = if @group.save
-      'Category was successfully added!'
+    if @group.save
       redirect_to moneytrack_path
     else
-      'Category was not added!'
       render :new
     end
   end

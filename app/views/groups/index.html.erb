@@ -5,11 +5,7 @@
         <i class="fas fa-sign-out-alt"></i>
     <% end %>
 </nav>
-    <% flash.each do |type, msg| %>
-      <div class="alert  mt-2">
-          <%= msg %>
-      </div>
-    <% end %>
+
 <div class="extra">
     <% if @groups.exists? %>
     <ul class = "group-ul">
