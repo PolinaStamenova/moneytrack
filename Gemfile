@@ -5,6 +5,8 @@ ruby '3.0.0'
 
 gem 'cancancan'
 gem 'devise'
+gem 'pry'
+gem 'rails-controller-testing'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
