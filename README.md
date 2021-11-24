@@ -2,7 +2,7 @@
 
 A mobile money tracker application.
 
-<!-- ![screenshot](./app/assets/images/screenshot-recipe-app.JPG) -->
+![screenshot](./app/assets/images/screenshot-moneytrack.JPG)
 
 ## Description:
 
