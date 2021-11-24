@@ -15,15 +15,15 @@
 </div>
 <div class = "inputs">
   <div class="field">
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name", required: :true %>
   </div>
 
   <div class=" border-top">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", required: :true %>
   </div>
 
   <div class=" border-top">
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", required: :true %>
   </div>
 </div>
 <% end %>

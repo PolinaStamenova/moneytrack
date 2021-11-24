@@ -8,10 +8,10 @@
   </nav>
 <div class = "inputs">
   <div class ="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", required: :true %>
   </div>
   <div class=" border-top">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", required: :true %>
   </div>
 </div>
 <div class = "forgot-pass">

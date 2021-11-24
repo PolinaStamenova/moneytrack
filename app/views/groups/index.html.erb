@@ -6,11 +6,6 @@
     <% end %>
 </nav>
 
-    <% flash.each do |type, msg| %>
-      <div class="alert alert-danger mt-2">
-          <%= msg %>
-      </div>
-    <% end %>
 <div class="extra">
     <% if @groups.exists? %>
     <ul class = "group-ul">

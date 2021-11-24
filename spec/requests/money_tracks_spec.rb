@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "MoneyTracks", type: :request do
-  describe "GET /new" do
-    it "returns http success" do
-      get "/money_tracks/new"
+RSpec.describe 'MoneyTracks', type: :request do
+  let(:user) { User.create(name: 'Polina', email: 'polina@mail.com', password: '123456') }
+  let(:group) { Group.create(name: 'Fast Food', icon: 'http//', user: user) }
+
+  describe 'GET /new' do
+    before { get new_group_money_track_path(group_id: group.id) }
+
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
-  end
 
-  describe "GET /create" do
-    it "returns http success" do
-      get "/money_tracks/create"
-      expect(response).to have_http_status(:success)
+    it "renders 'new' template" do
+      expect(response).to render_template('new')
     end
   end
-
 end
