@@ -13,15 +13,4 @@ RSpec.describe "Users", type: :request do
         expect(response).to render_template('home')
       end
   end
-
-  # describe "GET #new" do
-  #   before { get root_path }
-  #     it 'should have response status correct(ok)' do
-  #       expect(response).to have_http_status(:ok)
-  #     end
-
-  #     it "renders 'new' template" do
-  #       expect(response).to render_template('new')
-  #     end
-  # end
 end
