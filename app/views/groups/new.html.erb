@@ -1,12 +1,9 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
-
-
-<nav class="login-nav d-flex p-2 navbar-top">
-    <div class="col-3"><a href="groups"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
-    <div class="col-4 text-center create-group">CREATE GROUP</div>
-</nav>
-
+<div class = "nav-top-two">
+    <a href="/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <div id = "margin">
+      <p id= "no-padding">NEW CATEGORY</p>
+    </div>
+</div>
 <div class="login-page">
     <div>
         <%= form_with url: groups_path, model: @group do |f| %>

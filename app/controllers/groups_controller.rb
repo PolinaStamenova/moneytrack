@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @group_money_tracks = @group.money_tracks.order(created_at: "DESC")
   end
 
   def create

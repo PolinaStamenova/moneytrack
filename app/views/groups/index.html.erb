@@ -1,21 +1,38 @@
-<nav class="login-nav p-2 navbar-top">
-    <div class=" d-flex">
-        <div class="col-4"><a href="/users/<%=current_user.id%>"><i class="fa fa-bars" aria-hidden="true"></i></a></div>
-        <div class="col-4 groups-div">Groups</div>
-    </div>
-</nav>
-<div class="mt-5"></div>
-<div class="extra">
-<% if @groups.exists?%>
-    <% @groups.each do |group| %>
-
-    <div class="list-items"><img class="w-25 mr-2" src="<%= group.icon%>" alt="No IMG">
-        <%= link_to group.name, group_path(group) %>
-    </div>
-
+<nav class = "nav-top-two">
+    <a href="/"><i class="fas fa-home" aria-hidden="true"></i></a>
+    <p id= "no-padding">CATEGORIES</p>
+    <%= link_to destroy_user_session_path, method: :delete, class: "links" do %>
+        <i class="fas fa-sign-out-alt"></i>
     <% end %>
+</nav>
+
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-danger mt-2">
+          <%= msg %>
+      </div>
+    <% end %>
+<div class="extra">
+    <% if @groups.exists? %>
+    <ul class = "group-ul">
+        <% @groups.each do |group| %>
+          <li class = "group-list">
+            <div class="list-items">
+                <div class = "group-holder">
+                    <img class="w-25" src="<%= group.icon%>" alt="No IMG">
+                   <p class = "title"> <%= link_to group.name, group_path(group) %> </p>
+                </div>
+                <p class = "currency title"><%= number_to_currency(group.money_tracks.sum(&:amount))%></p>
+            </div>
+          </li>
+        <% end %>
+    </ul>
+    <%end%>
 </div>
-<%end%>
 <div class="green-field">
-    <%= button_to "Create", new_group_path, class: "green-button", method: "get" %>
+    <%= button_to "CREATE", new_group_path, class: "green-button", method: "get" %>
 </div>
+
+
+
+
+
