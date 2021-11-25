@@ -1,24 +1,85 @@
-# README
+# Moneytrack:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A mobile money tracker application.
 
-Things you may want to cover:
+![screenshot](./app/assets/images/screenshot-moneytrack.JPG)
 
-* Ruby version
+## Description:
 
-* System dependencies
+A mobile web application where a user manage its budget: have a list of transactions associated with a category, so that the user can see how much money it spent and on what.
 
-* Configuration
+## Live Link:
 
-* Database creation
+[Heroku](https://murmuring-river-52663.herokuapp.com/)
 
-* Database initialization
+## Video Demo:
 
-* How to run the test suite
+[Demo](https://www.loom.com/share/9db510ba3fcf4347a06bb2db4820960a)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Entity Relationship Diagram
 
-* Deployment instructions
+![screenshot](./app/assets/images/moneytrack_ERD.JPG)
 
-* ...
+## Built With
+
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+- SASS
+- CSS
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+## Instructions
+
+```
+$ cd <folder>
+```
+
+```
+$ git clone git@github.com:PolinaStamenova/moneytrack.git
+```
+
+```
+$ cd moneytrack
+```
+
+## Install
+
+```
+$ bundle install
+```
+
+## Run
+
+```
+$ rails db:create
+```
+
+```
+$ rails db:migrate
+```
+
+## Authors
+
+👤 **Polina Stamenova**
+
+- GitHub: [@githubhandle](https://github.com/PolinaStamenova)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/polina-stamenova-a60766112/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/PolinaStamenova/moneytrack/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Creative Commons license of the design

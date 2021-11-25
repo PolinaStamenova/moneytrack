@@ -1,3 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+
+  unauthenticated do
+    root "users#home"
+  end
+
+  root "groups#index", as: "moneytrack"
+
+  resources :groups, only: [:new, :show, :create] do
+    resources :money_tracks, only: [:new, :show, :create]
+  end
 end
+
+
+
