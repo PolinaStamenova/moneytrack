@@ -8,12 +8,17 @@ A mobile money tracker application.
 
 A mobile web application where a user manage its budget: have a list of transactions associated with a category, so that the user can see how much money it spent and on what.
 
+## Entity Relationship Diagram
+
+![screenshot](./app/assets/images/moneytrack_ERD.JPG)
+
 ## Built With
 
 - Ruby
 - Ruby on Rails
 - PostgreSQL
 - SASS
+- CSS
 
 ## Getting Started
 
@@ -69,3 +74,4 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
+- Creative Commons license of the design

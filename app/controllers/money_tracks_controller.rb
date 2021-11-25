@@ -1,8 +1,6 @@
 class MoneyTracksController < ApplicationController
   def new
-    # @group_id = group_id
     @group = Group.find(params[:group_id])
-
     @money_track = MoneyTrack.new
   end
 
