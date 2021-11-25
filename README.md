@@ -12,6 +12,10 @@ A mobile web application where a user manage its budget: have a list of transact
 
 [Heroku](https://murmuring-river-52663.herokuapp.com/)
 
+## Video Demo:
+
+[Demo](https://www.loom.com/share/9db510ba3fcf4347a06bb2db4820960a)
+
 ## Entity Relationship Diagram
 
 ![screenshot](./app/assets/images/moneytrack_ERD.JPG)
